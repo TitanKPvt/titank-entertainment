@@ -55,7 +55,7 @@ const Achievements = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img 
-              src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+              src={`${import.meta.env.BASE_URL}anuv.jpg`}
               alt="Concert Performance"
               className="rounded-lg shadow-2xl"
             />
