@@ -16,6 +16,8 @@ const Hero = () => {
           src={`${import.meta.env.BASE_URL}cover-page.webp`}
           alt="Concert Background"
           className="w-full h-full object-cover opacity-69"
+          loading="eager"
+          fetchPriority='high'
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
       </div>
