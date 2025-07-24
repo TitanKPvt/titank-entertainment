@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={`${import.meta.env.BASE_URL}excited-audience-watching-confetti-fireworks-having-fun-music-festival-night-copy-space.jpg`}
+          src={`${import.meta.env.BASE_URL}cover-page.webp`}
           alt="Concert Background"
           className="w-full h-full object-cover opacity-69"
         />
