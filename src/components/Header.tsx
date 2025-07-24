@@ -60,26 +60,58 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+              if (!isMenuOpen) {
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top when opening menu
+                setTimeout(() => {
+                  setIsMenuOpen(true);
+                }, 500);
+              } else {
+                setIsMenuOpen(false);
+              }
+            }}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
         
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-gray-700">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-2 text-white hover:text-red-400 transition-colors duration-200"
-              >
-                {item.name}
-              </button>
-            ))}
-          </nav>
-        )}
+{isMenuOpen && (
+  <>
+    {/* Prevent page scroll */}
+    <style>{`body { overflow: hidden; }`}</style>
+
+    {/* Background overlay */}
+    <div className="fixed inset-0 bg-black/90 z-40 transition-opacity duration-300" />
+
+    {/* Slide-in Menu */}
+    <nav className="fixed inset-0 z-50 flex flex-col items-center justify-center space-y-6 md:hidden transition-all duration-300 animate-fade-in">
+      {/* Close (X) button */}
+      <button
+        onClick={() => setIsMenuOpen(false)}
+        className="absolute top-6 right-6 text-white hover:text-red-400 transition-colors"
+      >
+        <X size={30} />
+      </button>
+
+      {navItems.map((item) => (
+        <button
+          key={item.name}
+          onClick={() => {
+            scrollToSection(item.href);
+            setIsMenuOpen(false);
+          }}
+          className="text-white text-2xl hover:text-red-400 transition-colors duration-200"
+        >
+          {item.name}
+        </button>
+      ))}
+    </nav>
+  </>
+)}
+
+
       </div>
     </header>
   );
