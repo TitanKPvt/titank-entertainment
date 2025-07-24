@@ -1,4 +1,3 @@
-import React from 'react';
 import { Calendar, Users, Mic, Megaphone, MapPin, TrendingUp, Database, Lightbulb } from 'lucide-react';
 
 const Services = () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronRight, Play } from 'lucide-react';
 
 const Hero = () => {
@@ -14,9 +13,9 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          src={`${import.meta.env.BASE_URL}excited-audience-watching-confetti-fireworks-having-fun-music-festival-night-copy-space.jpg`}
           alt="Concert Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-69"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
       </div>

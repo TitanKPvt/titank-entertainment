@@ -1,5 +1,4 @@
-import React from 'react';
-import { Music, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -30,17 +29,17 @@ const Footer = () => {
               Delivering unforgettable experiences and innovative business solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
-                <Facebook size={24} />
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-red-400 transition">
+                <FaFacebook size={24} />
               </a>
-              <a href="https://www.instagram.com/titank.ent?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors">
-                <Instagram size={24} />
+              <a href="https://instagram.com/titank.ent" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-red-400 transition">
+                <FaInstagram size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
-                <Linkedin size={24} />
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"  aria-label="LinkedIn" className="text-gray-400 hover:text-red-400 transition">
+                <FaLinkedin size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
-                <Twitter size={24} />
+              <a href="https://x.com/TitanK_Ent" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-gray-400 hover:text-red-400 transition">
+                <FaXTwitter size={24} />
               </a>
             </div>
           </div>
@@ -103,8 +102,8 @@ const Footer = () => {
                 </a>
               </p>
               <p>
-                <a href="tel:9101177118" className="hover:text-red-400 transition-colors">
-                  +91 9101177118
+                <a href="tel:8494924909" className="hover:text-red-400 transition-colors">
+                  +91 84949 24909
                 </a>
               </p>
             </div>
@@ -115,7 +114,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Our Location</h4>
             <div className="h-48 md:h-56 w-full rounded overflow-hidden border border-gray-700">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.543885647869!2d77.74049197704002!3d13.06467925440821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0ffffe50ce95%3A0xe4fa239e1d6450e3!2sPrestige%20Tranquility%20Club%20house!5e0!3m2!1sen!2sin!4v1753252270115!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2310.713878337641!2d77.73984318272251!3d13.09018352320184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1bbd1cc1159d%3A0x18a3883b25ba36ff!2sDVR%20Town%20Center!5e0!3m2!1sen!2sin!4v1753279224698!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

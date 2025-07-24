@@ -1,5 +1,4 @@
-import React from 'react';
-import {TrendingUp, Award, Target, Lightbulb, Users } from 'lucide-react';
+import {TrendingUp, Award, Lightbulb, Users } from 'lucide-react';
 
 const SpecialSections = () => {
   const whyChooseUs = [
