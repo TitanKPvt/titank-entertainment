@@ -37,7 +37,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <img
-              src={`${import.meta.env.BASE_URL}tkicon.png`}
+              src={`${import.meta.env.BASE_URL}tkicon.webp`}
               alt="TitanK Logo"
               className="h-10 w-10 object-contain"
             />

@@ -55,9 +55,9 @@ const Achievements = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img 
-              src={`${import.meta.env.BASE_URL}anuv.jpg`}
+              src={`${import.meta.env.BASE_URL}anuv.webp`}
               alt="Concert Performance"
-              className="rounded-lg shadow-2xl"
+              className="shadow-2xl border -24 border-red-900"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
           </div>

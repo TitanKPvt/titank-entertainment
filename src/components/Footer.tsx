@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <img
-                src={`${import.meta.env.BASE_URL}tkicon.png`}
+                src={`${import.meta.env.BASE_URL}tkicon.webp`}
                 alt="TitanK Logo"
                 className="h-10 w-10 object-contain"
               />
@@ -29,7 +29,7 @@ const Footer = () => {
               Delivering unforgettable experiences and innovative business solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-red-400 transition">
+              <a href="https://www.facebook.com/people/TitanK-Entertainment/61578719460814" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-red-400 transition">
                 <FaFacebook size={24} />
               </a>
               <a href="https://instagram.com/titank.ent" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-red-400 transition">

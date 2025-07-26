@@ -42,7 +42,7 @@ const SpecialSections = () => {
             </div>
             <div className="space-y-6">
               <div className="flex items-center space-x-3 mb-6">
-                <img src={`${import.meta.env.BASE_URL}tkicon.png`} alt="Artist Network" className="h-16 w-16 object-contain" />
+                <img src={`${import.meta.env.BASE_URL}tkicon.webp`} alt="Artist Network" className="h-16 w-16 object-contain" />
                 <h3 className="text-2xl font-bold text-white">Exclusive Artist Network</h3>
               </div>
               <p className="text-lg text-gray-300 leading-relaxed">
