@@ -1,4 +1,6 @@
-import { ChevronRight, Play } from 'lucide-react';
+import { ChevronRight, Play} from 'lucide-react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -9,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden">
+    <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden pt-24 md:pt-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -23,8 +25,8 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+      <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-4xl mx-auto">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-snug break-words">
           TITANK
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-300">
             ENTERTAINMENT
@@ -59,12 +61,15 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      
+
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-red-500 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-red-500 rounded-full mt-2 animate-pulse"></div>
-        </div>
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
+        <DotLottieReact
+          src="https://lottie.host/83467b85-8486-488a-9194-4221f34db70b/2s9kxhTwHk.lottie"
+          loop
+          autoplay
+          style={{ width: 80, height: 80 }}
+        />
       </div>
     </section>
   );
