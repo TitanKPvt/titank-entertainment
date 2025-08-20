@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.glow-text {
+  display: inline-block;
+  position: relative;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.05)
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: glow-sweep 5s linear infinite;
+}
+
+@keyframes glow-sweep {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}

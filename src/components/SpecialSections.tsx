@@ -34,7 +34,7 @@ const SpecialSections = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/1389429/pexels-photo-1389429.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                src="recording-studio.webp"
                 alt="Recording Studio"
                 className="rounded-lg shadow-2xl"
               />
@@ -42,7 +42,7 @@ const SpecialSections = () => {
             </div>
             <div className="space-y-6">
               <div className="flex items-center space-x-3 mb-6">
-                <img src={`${import.meta.env.BASE_URL}tkicon.webp`} alt="Artist Network" className="h-16 w-16 object-contain" />
+                <img src={`${import.meta.env.BASE_URL}tkmod3.webp`} alt="Artist Network" className="h-16 w-16 object-contain" />
                 <h3 className="text-2xl font-bold text-white">Exclusive Artist Network</h3>
               </div>
               <p className="text-lg text-gray-300 leading-relaxed">

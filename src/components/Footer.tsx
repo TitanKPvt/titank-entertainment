@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <img
-                src={`${import.meta.env.BASE_URL}tkicon.webp`}
+                src={`${import.meta.env.BASE_URL}tkmod3.webp`}
                 alt="TitanK Logo"
                 className="h-10 w-10 object-contain"
               />
@@ -57,12 +58,12 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('#about')}
+                <Link
+                  to="/about"
                   className="text-gray-400 hover:text-red-400 transition-colors"
                 >
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
                 <button 
