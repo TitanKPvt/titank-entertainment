@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import {
   Star,
   Users,
-  Calendar,
   PartyPopper,
   Trophy,
   Mic,

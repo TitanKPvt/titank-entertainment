@@ -1,4 +1,4 @@
-import { Star, Users, Calendar, Trophy, PartyPopper } from "lucide-react";
+import { Star, Users, Trophy, PartyPopper } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
