@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import { Mail, Phone, Send, MapPin, Clock } from 'lucide-react';
-import {Turnstile} from '@marsidev/react-turnstile';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
-    access_key: '0313fc15-72c6-4556-a9fb-f896dec7cec3',
-    'cf-turnstile-response': ''
+    access_key: '0313fc15-72c6-4556-a9fb-f896dec7cec3'
   });
 
-  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false); // ✅ added
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,6 +26,7 @@ const Contact = () => {
       const result = await response.json();
 
       if (result.success) {
+        // ✅ show popup instead of alert
         setShowSuccessPopup(true);
         setTimeout(() => setShowSuccessPopup(false), 3000);
 
@@ -35,8 +34,7 @@ const Contact = () => {
           name: '',
           email: '',
           message: '',
-          access_key: '0313fc15-72c6-4556-a9fb-f896dec7cec3',
-          'cf-turnstile-response': ''
+          access_key: '0313fc15-72c6-4556-a9fb-f896dec7cec3'
         });
       } else {
         alert('Something went wrong. Please try again.');
@@ -74,9 +72,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-red-500 mt-1" />
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">General Inquiries</h4>
-                    <p className="text-gray-400 mb-2">
-                      For general inquiries, partnership opportunities, and service requests. We aim to respond to all emails within 24 hours.
-                    </p>
+                    <p className="text-gray-400 mb-2">For general inquiries, partnership opportunities, and service requests. We aim to respond to all emails within 24 hours.</p>
                     <a href="mailto:titank.entertainment@gmail.com" className="text-red-400 hover:text-red-300 transition-colors">
                       titank.entertainment@gmail.com
                     </a>
@@ -165,16 +161,6 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Turnstile Widget */}
-              <Turnstile
-                siteKey="0x4AAAAAABth8WeED31ID69o"
-                
-                onSuccess={(token) =>
-                  setFormData({ ...formData, 'cf-turnstile-response': token })
-                }
-                
-              />
-
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-red-600 to-red-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-red-700 hover:to-red-600 transition-all duration-300 flex items-center justify-center space-x-2 group"
@@ -184,7 +170,7 @@ const Contact = () => {
               </button>
             </form>
 
-            {/* Success Popup */}
+            {/* ✅ Success Popup goes here */}
             {showSuccessPopup && (
               <div className="fixed top-6 right-6 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center justify-between space-x-4 z-50">
                 <span>✅ Message sent successfully!</span>
@@ -193,6 +179,7 @@ const Contact = () => {
                 </button>
               </div>
             )}
+            {/* ✅ End popup */}
           </div>
         </div>
       </div>
