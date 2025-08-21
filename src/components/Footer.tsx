@@ -1,15 +1,24 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useCallback } from "react";
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = useCallback((sectionId: string) => {
+    if (window.location.pathname !== "/") {
+      navigate("/", { replace: false });
+      setTimeout(() => {
+        const element = document.querySelector(sectionId);
+        if (element) element.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.querySelector(sectionId);
+      if (element) element.scrollIntoView({ behavior: "smooth" });
     }
-  };
+  }, [navigate]);
 
   return (
     <footer className="bg-black border-t border-gray-800">
@@ -51,7 +60,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <button 
-                  onClick={() => scrollToSection('#home')}
+                  onClick={() => handleNavigation('#home')}
                   className="text-gray-400 hover:text-red-400 transition-colors"
                 >
                   Home
@@ -67,7 +76,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('#services')}
+                  onClick={() => handleNavigation('#services')}
                   className="text-gray-400 hover:text-red-400 transition-colors"
                 >
                   Services
@@ -75,7 +84,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('#achievements')}
+                  onClick={() => handleNavigation('#achievements')}
                   className="text-gray-400 hover:text-red-400 transition-colors"
                 >
                   Achievements
@@ -83,7 +92,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('#contact')}
+                  onClick={() => handleNavigation('#contact')}
                   className="text-gray-400 hover:text-red-400 transition-colors"
                 >
                   Contact
