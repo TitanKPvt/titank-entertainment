@@ -124,7 +124,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Our Location</h4>
             <div className="h-48 md:h-56 w-full rounded overflow-hidden border border-gray-700">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2310.713878337641!2d77.73984318272251!3d13.09018352320184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1bbd1cc1159d%3A0x18a3883b25ba36ff!2sDVR%20Town%20Center!5e0!3m2!1sen!2sin!4v1753279224698!5m2!1sen!2sin"
+                src="<https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.9090000812091!2d77.74523949984685!3d13.064671907329695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0f001b8588a7%3A0xdec3d7059b20ed68!2sTitanK%20Entertainment!5e0!3m2!1sen!2sin!4v1766220497358!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
