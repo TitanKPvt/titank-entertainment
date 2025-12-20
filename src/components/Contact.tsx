@@ -69,7 +69,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 text-red-500 mt-1" />
+                  <Mail className="h-10 w-10 text-red-500 mt-1" />
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">General Inquiries</h4>
                     <p className="text-gray-400 mb-2">For general inquiries, partnership opportunities, and service requests. We aim to respond to all emails within 24 hours.</p>
@@ -84,14 +84,19 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Contact</h4>
                     <p className="text-gray-400 mb-2">Call us at:</p>
-                    <a href="tel:8494924909" className="text-red-400 hover:text-red-300 transition-colors">
+                    <a href="tel:9324903399" className="text-red-400 hover:text-red-300 transition-colors">
+                      +91 93249 03399
+                    </a>
+                    <p className="text-gray-400 mb-2">Whatsapp us at:</p>
+                    <a href="https://wa.me/918494924909" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-400 transition-colors block mt-2"
+                    >
                       +91 84949 24909
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-red-600 mt-1" />
+                  <MapPin className="h-7 w-7 text-red-600 mt-1" />
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Location</h4>
                     <p className="text-gray-400">Bengaluru, India</p>
