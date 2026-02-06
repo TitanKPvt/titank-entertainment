@@ -43,13 +43,13 @@ const achievements = [
     description:
       "Strong reputation for delivering high-energy, immersive events",
   },
-  {
+ /* {
     icon: <Mic className="h-8 w-8 text-red-400" />,
     number: "Sonu Nigam",
     label: "EPGI Live Show",
     description:
       "Collaborated with Sonu Nigam for a grand-scale concert at EPGI, delivering a premium musical experience",
-  },
+  },*/
 ];
 
 const carouselImages = [
@@ -63,9 +63,9 @@ const carouselImages = [
 const keyHighlights = [
   "From the magic of Anuv Jain live in Hyderabad to the timeless voice of Sonu Nigam captivating Bangalore — TitanK Entertainment has always been inspired to bring unforgettable experiences to audiences.",
   "Our journey has been shaped by iconic concerts and grand celebrations across India, motivating us to create events that leave a mark.",
-  "With a legacy of being part of India’s most memorable entertainment moments — from Anuv Jain’s soulful night in Hyderabad to Sonu Nigam’s electrifying Bangalore concert — we continue to set the stage for extraordinary experiences.",
+ /* "With a legacy of being part of India’s most memorable entertainment moments — from Anuv Jain’s soulful night in Hyderabad to Sonu Nigam’s electrifying Bangalore concert — we continue to set the stage for extraordinary experiences.",
   "We’ve witnessed, supported, and been part of India’s biggest live experiences — whether it’s Anuv Jain in Hyderabad or Sonu Nigam in Bangalore — and we bring that same energy to every event we craft.",
-  
+  */
 ];
 
 const Achievements = () => {
