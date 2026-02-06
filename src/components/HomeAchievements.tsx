@@ -40,8 +40,7 @@ const carouselImages = [
   "anuvjain2.webp",
   "anuvjain3.webp",
   "anuvjain4.webp",
-  "sonu1.webp",
-  "sonu2.webp",
+
 ];
 
 const HomeAchievements = () => {
