@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
@@ -36,6 +36,54 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
     </AnimatePresence>
   );
 };
+
+const SponsorDownload = () => {
+  useEffect(() => {
+    // Start PDF download
+    const downloadLink = document.createElement('a');
+    downloadLink.href = `${import.meta.env.BASE_URL}TitanK_Sponsorship_Terms_Conditions.pdf`;
+    downloadLink.download = 'TitanK_Sponsorship_Terms_Conditions.pdf';
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+
+    // Return to the homepage
+    setTimeout(() => {
+      window.location.replace(import.meta.env.BASE_URL);
+    }, 1000);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-black flex items-center justify-center text-white text-center px-6">
+      <div>
+        <h2 className="text-2xl font-semibold mb-3">
+          Thank you for your interest in TitanK Entertainment.
+        </h2>
+
+        <p className="text-gray-300">
+          Your Sponsorship Terms & Conditions PDF is downloading...
+        </p>
+
+        <p className="text-gray-400 mt-4">
+          If the download does not start,{' '}
+          <a
+            href={`${import.meta.env.BASE_URL}TitanK_Sponsorship_Terms_Conditions.pdf`}
+            download
+            className="underline"
+          >
+            click here
+          </a>.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+
+
+
+
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -78,6 +126,7 @@ function App() {
                   <Route path="/services" element={<Services />} />
                   <Route path="/achievements" element={<Achievements />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/sponsor" element={<SponsorDownload />} />
                   <Route path="*" element={<NotFound />} /> {/* ✅ 404 Route */}
                 </Routes>
               </PageWrapper>
